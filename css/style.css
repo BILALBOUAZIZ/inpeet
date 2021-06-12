@@ -47,7 +47,7 @@
   width: 100%;
 }
 #slider button[type="submit"]{
-  position:left;
+  position:center;
   background-color: #04AA6D;
   color: rgb(226,226,226);
   padding: 0px 15px;

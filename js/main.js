@@ -19,7 +19,6 @@ function setbutton(id) {
     mylogin.style.background = '#555'; 
     //action
 
-
 }
 
     if (id==2) {
