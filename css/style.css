@@ -86,13 +86,16 @@
     100% { -webkit-transform: translateX(-100%); }
 }
 
-.container-1{
+#sr{
   display:flex;
+  position: relative;
   width: 350px;
-  height: 500px;
+  height: 450px;
+  margin: 20px -5px ;
   border-radius: 40px;
   box-shadow: 12px 12px 24px 0px rgb(0,0,0,0.2),-12px -12px 24px 0 rgba(255,255, 255, 1) ;
-
+  transform: translateX(-100%);
+  -webkit-transform: translateX(-100%);
   align-items: center;
   justify-content: center;
   min-height: 70vh;
@@ -125,7 +128,7 @@ form.sign-up-form{
 .input-field{
   width:280px;
   height: 50px;
-  margin: 10px 0;
+  margin: 10px ;
   background: #e0e0e0;
   border-radius: 40px;
   display: flex;
@@ -182,10 +185,37 @@ p, a{
   color: #04AA6D;
 }
 
-.container-1.sign-up-mode form.sign-in-form{
+#sr.sign-up-mode form.sign-in-form{
   visibility: hidden;
 }
-.container-1.sign-up-mode form.sign-up-form{
+#sr.sign-up-mode form.sign-up-form{
   visibility: visible;
 }
 
+.si{
+  animation: si 1.5s forwards;
+  -webkit-animation: si 0.5s forwards;
+}
+
+.so {
+  animation: so 1.5s forwards;
+  -webkit-animation: so 0.5s forwards;
+}
+  
+@keyframes si {
+  100% { transform: translateX(135%); }
+}
+
+@-webkit-keyframes si {
+  100% { -webkit-transform: translateX(0%); }
+}
+  
+@keyframes so {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-100%); }
+}
+
+@-webkit-keyframes so {
+  0% { -webkit-transform: translateX(0%); }
+  100% { -webkit-transform: translateX(-100%); }
+}

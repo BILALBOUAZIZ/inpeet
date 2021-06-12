@@ -40,7 +40,11 @@ function setbutton(id) {
     mycontact.style.background = '#04AA6D'; 
     mymenu.style.background = '#555'; 
     mypanel.style.background = '#555'; 
-    mylogin.style.background = '#555';  }
+    mylogin.style.background = '#555';
+    //action
+    var isOpena = container.classList.contains('si');
+    container.setAttribute('class', isOpena ? 'so' : 'si');    
+}
 
     if (id==4) {myhome.style.background = '#555'; 
     mysearch.style.background = '#555'; 
@@ -67,7 +71,7 @@ function setbutton(id) {
 
 const sign_up_link = document.querySelector("#sign-up-link");
 const sign_in_link = document.querySelector("#sign-in-link");
-const container = document.querySelector(".container-1")
+const container = document.querySelector("#sr")
 
 
 sign_up_link.addEventListener("click", ()=>{
