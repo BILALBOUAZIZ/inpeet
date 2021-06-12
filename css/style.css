@@ -1,0 +1,83 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.icon-bar {
+    display: inline-flexbox;
+    width: 100%; /* Full-width */
+    background-color: #555; /* Dark-grey background */
+    overflow: auto; /* Overflow due to float */
+  }
+  
+  .icon-bar a {
+    display: inline-flexbox;
+    float: left; /* Float links side by side */
+    text-align: center; /* Center-align text */
+    width: 16.6666%;
+    padding: 12px ; /* Some top and bottom padding */
+    transition: all 0.3s ease; /* Add transition for hover effects */
+    color: rgb(226,226,226); /* White text color */
+    font-size: 17px; /* Increased font size */
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+
+  .icon-bar a:hover {
+    background-color: #000; /* Add a hover color */
+  }
+  
+  #main-header{
+      background-image: url('/assets/traces1.jpg');
+  }
+
+  #slider {
+    display:flex;
+    position:absolute;
+    width: 350px;
+    height: 33px;
+    transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+}
+#slider input{
+  border-radius:15px ;
+  padding: 18px;
+  width: 100%;
+}
+#slider button[type="submit"]{
+  position:left;
+  background-color: #04AA6D;
+  color: rgb(226,226,226);
+  padding: 0px 15px;
+  border: 12px black;
+  border-radius: 15px;
+}
+.slide-in {
+    animation: slide-in 1.5s forwards;
+    -webkit-animation: slide-in 0.5s forwards;
+}
+
+.slide-out {
+    animation: slide-out 0.5s forwards;
+    -webkit-animation: slide-out 0.5s forwards;
+}
+    
+@keyframes slide-in {
+    100% { transform: translateX(67.5%); }
+}
+
+@-webkit-keyframes slide-in {
+    100% { -webkit-transform: translateX(60%); }
+}
+    
+@keyframes slide-out {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-100%); }
+}
+
+@-webkit-keyframes slide-out {
+    0% { -webkit-transform: translateX(0%); }
+    100% { -webkit-transform: translateX(-100%); }
+}
