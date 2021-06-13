@@ -19,9 +19,14 @@ function setbutton(id) {
     mylogin.style.background = '#555'; 
     //action
 
+    var isOpen = slider.classList.contains('slide-in');
+    slider.setAttribute('class', isOpen ? 'slide-out' : 'slide-out');
+    var isOpena = container.classList.contains('si');
+    container.setAttribute('class', isOpena ? 'so': 'so' )
+
 }
 
-    if (id==2) {
+    else if (id==2) {
     //set background 
     myhome.style.background = '#555'; 
     mysearch.style.background = '#04AA6D'; 
@@ -32,40 +37,71 @@ function setbutton(id) {
     
     //action
     var isOpen = slider.classList.contains('slide-in');
-    slider.setAttribute('class', isOpen ? 'slide-out' : 'slide-in');    
+    slider.setAttribute('class', isOpen ? 'slide-out' : 'slide-in'); 
+    var isOpena = container.classList.contains('si');
+    container.setAttribute('class', isOpena ? 'so': 'so' )   
 }
 
-    if (id==3) {myhome.style.background = '#555'; 
+    else if (id==3) {myhome.style.background = '#555'; 
     mysearch.style.background = '#555'; 
     mycontact.style.background = '#04AA6D'; 
     mymenu.style.background = '#555'; 
     mypanel.style.background = '#555'; 
     mylogin.style.background = '#555';
     //action
+    var isOpen = slider.classList.contains('slide-in');
+    slider.setAttribute('class', isOpen ? 'slide-out' : 'slide-out');
     var isOpena = container.classList.contains('si');
-    container.setAttribute('class', isOpena ? 'so' : 'si');    
+    container.setAttribute('class', isOpena ? 'so': 'so' )   
 }
 
-    if (id==4) {myhome.style.background = '#555'; 
+    else if (id==4) {myhome.style.background = '#555'; 
     mysearch.style.background = '#555'; 
     mycontact.style.background = '#555'; 
     mymenu.style.background = '#04AA6D'; 
     mypanel.style.background = '#555'; 
-    mylogin.style.background = '#555';}
+    mylogin.style.background = '#555';
+    
+    //action
+    var isOpen = slider.classList.contains('slide-in');
+    slider.setAttribute('class', isOpen ? 'slide-out' : 'slide-out');
+    var isOpena = container.classList.contains('si');
+    container.setAttribute('class', isOpena ? 'so': 'so' )
 
-    if (id==5) {myhome.style.background = '#555'; 
+}
+
+    else if (id==5) {myhome.style.background = '#555'; 
     mysearch.style.background = '#555'; 
     mycontact.style.background = '#555'; 
     mymenu.style.background = '#555'; 
     mypanel.style.background = '#04AA6D'; 
-    mylogin.style.background = '#555'; }
+    mylogin.style.background = '#555';
+
+    //action
+
+    var isOpen = slider.classList.contains('slide-in');
+    slider.setAttribute('class', isOpen ? 'slide-out' : 'slide-out');
+    var isOpena = container.classList.contains('si');
+    container.setAttribute('class', isOpena ? 'so': 'so' )
+
+}
 
     if (id==6) {myhome.style.background = '#555'; 
     mysearch.style.background = '#555'; 
     mycontact.style.background = '#555'; 
     mymenu.style.background = '#555'; 
     mypanel.style.background = '#555'; 
-    mylogin.style.background = '#04AA6D'; }
+    mylogin.style.background = '#04AA6D'; 
+
+    //action
+
+    var isOpena = container.classList.contains('si');
+    container.setAttribute('class', isOpena ? 'so' : 'si');
+    var isOpen = slider.classList.contains('slide-in');
+    slider.setAttribute('class', isOpen ? 'slide-out' : 'slide-out');
+
+
+}
 
     }
 

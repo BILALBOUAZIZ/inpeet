@@ -203,7 +203,7 @@ p, a{
 }
   
 @keyframes si {
-  100% { transform: translateX(135%); }
+  100% { transform: translateX(277%); }
 }
 
 @-webkit-keyframes si {
