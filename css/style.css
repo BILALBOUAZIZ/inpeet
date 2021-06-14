@@ -33,7 +33,7 @@
   #main-header{
       background-image: url('/assets/traces1.jpg');
   }
-
+/*style rechercher*/
   #slider {
     display:flex;
     position:absolute;
@@ -58,6 +58,7 @@
   margin: 10px ;
 
 }
+/*animation rechercher*/
 .slide-in {
     animation: slide-in 1.5s forwards;
     -webkit-animation: slide-in 0.5s forwards;
@@ -85,6 +86,8 @@
     0% { -webkit-transform: translateX(0%); }
     100% { -webkit-transform: translateX(-100%); }
 }
+
+/*style seconnecter*/
 
 #sr{
   display:flex;
@@ -191,6 +194,7 @@ p, a{
 #sr.sign-up-mode form.sign-up-form{
   visibility: visible;
 }
+/*animation seconnecter*/
 
 .si{
   animation: si 1.5s forwards;
@@ -218,4 +222,138 @@ p, a{
 @-webkit-keyframes so {
   0% { -webkit-transform: translateX(0%); }
   100% { -webkit-transform: translateX(-100%); }
+}
+
+/*styling menu*/
+#tab {
+  display:grid;
+  float:left;
+  position: relative;
+  width: 300px;
+  height: 220px;
+  margin: -535px 505px ;
+  border-radius: 40px;
+  box-shadow: 12px 12px 24px 0px rgb(0,0,0,0.2),-12px -12px 24px 0 rgba(255,255, 255, 1) ;
+  align-items: center;
+  justify-content: center;
+
+  background-color:#e0e0e0 ;
+}
+
+/* Style the buttons that are used to open the tab content */
+#tab button {
+  display: block;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  box-sizing: border-box;
+  font-size: inherit;
+  text-decoration: none;
+  background-color: inherit;
+  color: rgb(66, 66, 66);
+  padding: 22px 16px;
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+#tab button:hover {
+  background-color: rgb(53, 51, 51);
+  color: rgb(226,226,226);
+}
+
+/* Create an active/current "tab button" class */
+#tab button.active {
+  background-color: #04AA6D;
+  color: rgb(226,226,226);
+
+}
+
+/* Style the tab content */
+
+.tabcontent  {
+  display: none;
+  float: left;
+  margin: -525px 850px;
+  padding: 20px 20px;
+  border-radius: 40px;
+  box-shadow: 12px 12px 24px 0px rgb(0,0,0,0.2),-12px -12px 24px 0 rgba(255,255, 255, 1) ;
+  align-items: grid;
+  justify-content: center;
+  background-color:#e0e0e0 ;
+  width: 20%;
+  height: 200px;
+}
+.tabcontent textarea {
+  padding: 8px;
+  height: 80%;
+}
+.tabcontent label{
+  display: block;
+  padding-bottom:10px;
+  
+}
+
+.tabcontent p{
+  display: block;
+  padding-top:10px;
+}
+.tabcontent button{
+  display: block;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  box-sizing: border-box;
+  font-size: inherit;
+  text-decoration: none;
+  background-color: inherit;
+  color: rgb(66, 66, 66);
+  padding: 22px 16px;
+  width: 100%;
+  height: 30%;
+  border: none;
+  outline: none;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
+  
+}
+
+.tabcontent button:hover {
+  background-color: rgb(53, 51, 51);
+  color: rgb(226,226,226);
+}
+
+
+/*animation menu */
+.ajilhna{
+  animation: aji 1.5s forwards;
+  -webkit-animation: aji 0.5s forwards;
+}
+
+.sirlhih {
+  animation: sir 1.5s forwards;
+  -webkit-animation: sir 0.5s forwards;
+}
+  
+@keyframes aji {
+  100% { transform: translateX(-5%); }
+}
+
+@-webkit-keyframes aji {
+  100% { -webkit-transform: translateX(0%); }
+}
+  
+@keyframes sir {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-400%); }
+}
+
+@-webkit-keyframes sir {
+  0% { -webkit-transform: translateX(0%); }
+  100% { -webkit-transform: translateX(-1000%); }
+}
+.contenttab{
+  display:grid ;
 }

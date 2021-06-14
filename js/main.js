@@ -6,7 +6,11 @@ const mymenu=document.querySelector('#menu');
 const mylogin=document.querySelector('#login');
 const mypanel=document.querySelector('#panier');
 const myform=document.querySelector("#slider");
-
+const sign_up_link = document.querySelector("#sign-up-link");
+const sign_in_link = document.querySelector("#sign-in-link");
+const container = document.querySelector("#sr")
+const menucontainer=document.querySelector("#tab")
+const contenttab=document.querySelector(".contenttab")
 
 function setbutton(id) {
     if (id==1) {
@@ -18,6 +22,11 @@ function setbutton(id) {
     mypanel.style.background = '#555'; 
     mylogin.style.background = '#555'; 
     //action
+
+
+    var isOpenaa = menucontainer.classList.contains('ajilhna');
+    menucontainer.setAttribute('class', isOpenaa ? 'sirlhih' : 'sirlhih'); 
+    contenttab.style.display="none";
 
     var isOpen = slider.classList.contains('slide-in');
     slider.setAttribute('class', isOpen ? 'slide-out' : 'slide-out');
@@ -38,6 +47,13 @@ function setbutton(id) {
     //action
     var isOpen = slider.classList.contains('slide-in');
     slider.setAttribute('class', isOpen ? 'slide-out' : 'slide-in'); 
+
+
+    var isOpenaa = menucontainer.classList.contains('ajilhna');
+    menucontainer.setAttribute('class', isOpenaa ? 'sirlhih' : 'sirlhih'); 
+    contenttab.style.display="none";
+
+
     var isOpena = container.classList.contains('si');
     container.setAttribute('class', isOpena ? 'so': 'so' )   
 }
@@ -49,6 +65,13 @@ function setbutton(id) {
     mypanel.style.background = '#555'; 
     mylogin.style.background = '#555';
     //action
+
+
+    var isOpenaa = menucontainer.classList.contains('ajilhna');
+    menucontainer.setAttribute('class', isOpenaa ? 'sirlhih' : 'sirlhih'); 
+    contenttab.style.display="none";
+
+
     var isOpen = slider.classList.contains('slide-in');
     slider.setAttribute('class', isOpen ? 'slide-out' : 'slide-out');
     var isOpena = container.classList.contains('si');
@@ -63,6 +86,16 @@ function setbutton(id) {
     mylogin.style.background = '#555';
     
     //action
+
+    var isOpenaa = menucontainer.classList.contains('ajilhna');
+    menucontainer.setAttribute('class', isOpenaa ? 'sirlhih' : 'ajilhna'); 
+    if(isOpenaa){
+        
+        contenttab.style.display="none";     
+    }
+    else{        contenttab.style.display="grid";     
+}
+
     var isOpen = slider.classList.contains('slide-in');
     slider.setAttribute('class', isOpen ? 'slide-out' : 'slide-out');
     var isOpena = container.classList.contains('si');
@@ -78,6 +111,11 @@ function setbutton(id) {
     mylogin.style.background = '#555';
 
     //action
+
+    var isOpenaa = menucontainer.classList.contains('ajilhna');
+    menucontainer.setAttribute('class', isOpenaa ? 'sirlhih' : 'sirlhih'); 
+    contenttab.style.display="none";
+
 
     var isOpen = slider.classList.contains('slide-in');
     slider.setAttribute('class', isOpen ? 'slide-out' : 'slide-out');
@@ -95,6 +133,12 @@ function setbutton(id) {
 
     //action
 
+
+    var isOpenaa = menucontainer.classList.contains('ajilhna');
+    menucontainer.setAttribute('class', isOpenaa ? 'sirlhih' : 'sirlhih'); 
+    contenttab.style.display="none";
+
+
     var isOpena = container.classList.contains('si');
     container.setAttribute('class', isOpena ? 'so' : 'si');
     var isOpen = slider.classList.contains('slide-in');
@@ -105,10 +149,6 @@ function setbutton(id) {
 
     }
 
-const sign_up_link = document.querySelector("#sign-up-link");
-const sign_in_link = document.querySelector("#sign-in-link");
-const container = document.querySelector("#sr")
-
 
 sign_up_link.addEventListener("click", ()=>{
     container.classList.add("sign-up-mode");
@@ -117,3 +157,27 @@ sign_up_link.addEventListener("click", ()=>{
 sign_in_link.addEventListener("click", ()=>{
     container.classList.remove("sign-up-mode");
 })
+
+
+function openIt(evt, Name) {
+    // Declare all variables
+    var i, tabcontent, tablinks;
+  
+    // Get all elements with class="tabcontent" and hide them
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+  
+    // Get all elements with class="tablinks" and remove the class "active"
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+  
+    // Show the current tab, and add an "active" class to the link that opened the tab
+    document.getElementById(Name).style.display = "block";
+    evt.currentTarget.className += " active";
+  } 
+
+  
