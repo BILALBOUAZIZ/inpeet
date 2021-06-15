@@ -35,7 +35,7 @@ $app->get('/command3/{id}', function (Request $request, Response $response, arra
     return $response;
 });
 $app->group("/command", function (App $app) {
-    $app->get('/', \real\command::class . ":get_commands"); // .... /command/
+    $app->get('/', \real\command::class . ":get_commands"); // .... /command/ /* verbes http*/
     $app->get('/{id}', \real\command::class . ":get_command"); // .... /command/2
     $app->post('/', \real\command::class . ":create_command");
     $app->put('/{id}', \real\command::class . ":update_command");
