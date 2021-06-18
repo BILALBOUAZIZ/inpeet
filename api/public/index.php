@@ -7,12 +7,10 @@ use Slim\App;
 require '../../vendor/autoload.php';
 
 $app = new \Slim\App([   /*pour afficher les erreurs*/
-
     'settings' => [
         'displayErrorDetails' => true,
         'debug'               => true,
     ]
-
 ]);
 $container = $app->getContainer();
 $container["db"] =  function () {
@@ -23,8 +21,7 @@ $container["db"] =  function () {
 
 $app->get('/hello/{name}', function (Request $request, Response $response, array $args) {
     $name = $args['name'];
-    $response->getBody()->write("Hello, $name");
-
+    $response->getBody()->write("test meriam li ktbat hadchi $name");
     return $response;
 });
 
