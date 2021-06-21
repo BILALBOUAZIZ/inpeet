@@ -11,6 +11,7 @@ const sign_in_link = document.querySelector("#sign-in-link");
 const container = document.querySelector("#sr")
 const menucontainer=document.querySelector("#tab")
 const contenttab=document.querySelector(".contenttab")
+const ctct=document.querySelector("#ctct")
 
 function setbutton(id) {
     if (id==1) {
@@ -23,6 +24,8 @@ function setbutton(id) {
     mylogin.style.background = '#555'; 
     //action
 
+    var isOpenat = ctct.classList.contains('show');
+    ctct.setAttribute('class', isOpenat ? 'hide' : 'hide'); 
 
     var isOpenaa = menucontainer.classList.contains('ajilhna');
     menucontainer.setAttribute('class', isOpenaa ? 'sirlhih' : 'sirlhih'); 
@@ -49,6 +52,9 @@ function setbutton(id) {
     slider.setAttribute('class', isOpen ? 'slide-out' : 'slide-in'); 
 
 
+    var isOpenat = ctct.classList.contains('show');
+    ctct.setAttribute('class', isOpenat ? 'hide' : 'hide'); 
+
     var isOpenaa = menucontainer.classList.contains('ajilhna');
     menucontainer.setAttribute('class', isOpenaa ? 'sirlhih' : 'sirlhih'); 
     contenttab.style.display="none";
@@ -65,6 +71,9 @@ function setbutton(id) {
     mypanel.style.background = '#555'; 
     mylogin.style.background = '#555';
     //action
+    var isOpenat = ctct.classList.contains('show');
+    ctct.setAttribute('class', isOpenat ? 'hide' : 'show'); 
+
 
 
     var isOpenaa = menucontainer.classList.contains('ajilhna');
@@ -96,6 +105,8 @@ function setbutton(id) {
     else{        contenttab.style.display="grid";     
 }
 
+    var isOpenat = ctct.classList.contains('show');
+    ctct.setAttribute('class', isOpenat ? 'hide' : 'hide'); 
     var isOpen = slider.classList.contains('slide-in');
     slider.setAttribute('class', isOpen ? 'slide-out' : 'slide-out');
     var isOpena = container.classList.contains('si');
@@ -112,6 +123,10 @@ function setbutton(id) {
 
     //action
 
+
+
+    var isOpenat = ctct.classList.contains('show');
+    ctct.setAttribute('class', isOpenat ? 'hide' : 'hide'); 
     var isOpenaa = menucontainer.classList.contains('ajilhna');
     menucontainer.setAttribute('class', isOpenaa ? 'sirlhih' : 'sirlhih'); 
     contenttab.style.display="none";
@@ -137,6 +152,8 @@ function setbutton(id) {
     var isOpenaa = menucontainer.classList.contains('ajilhna');
     menucontainer.setAttribute('class', isOpenaa ? 'sirlhih' : 'sirlhih'); 
     contenttab.style.display="none";
+    var isOpenat = ctct.classList.contains('show');
+    ctct.setAttribute('class', isOpenat ? 'hide' : 'hide'); 
 
 
     var isOpena = container.classList.contains('si');
@@ -180,4 +197,32 @@ function openIt(evt, Name) {
     evt.currentTarget.className += " active";
   } 
 
+//slide show
+  var slideIndex = 1;
+  showSlides(slideIndex);
   
+  // Next/previous controls
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+  
+  // Thumbnail image controls
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+  
+  function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+  } 
