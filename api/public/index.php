@@ -47,4 +47,19 @@ $app->group("/panier", function (App $app) {
     $app->delete('/{id},{idcl}', \real\panier::class . ":delete_cart");
 });
 
+$app->group("/categorie", function (App $app) {
+    $app->get('/', \real\categorie::class . ":show_categ");
+}); 
+
+
+$app->group("/produit", function (App $app) {
+    $app->get('/', \real\produit::class . ":get_products"); 
+    $app->get('/{idc}', \real\produit::class . ":par_catego"); 
+    $app->get('/{idr}', \real\produit::class . ":par_race"); 
+    $app->post('/', \real\produit::class . ":create_product");
+    $app->put('/{id}', \real\produit::class . ":update_product");
+    $app->delete('/{id}', \real\produit::class . ":delete_product");
+});
+
+
 $app->run();
