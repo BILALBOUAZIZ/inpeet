@@ -40,11 +40,11 @@ $app->group("/command", function (App $app) {
 });
 
 $app->group("/panier", function (App $app) {
-    $app->get('/', \real\panier::class . ":show_card"); // .... /command/ /* verbes http*/
-    $app->get('/{id},{idcl}', \real\panier::class . ":show_element_card"); // .... /command/2
-    $app->post('/', \real\panier::class . ":add_to_card");
-    $app->put('/{id}', \real\panier::class . ":update_card");
-    $app->delete('/{id},{idcl}', \real\panier::class . ":delete_card");
+    $app->get('/', \real\panier::class . ":show_cart"); // .... /command/ /* verbes http*/
+    $app->get('/{id},{idcl}', \real\panier::class . ":show_element_cart"); // .... /command/2
+    $app->post('/', \real\panier::class . ":add_to_cart");
+    $app->put('/{id}', \real\panier::class . ":update_cart");
+    $app->delete('/{id},{idcl}', \real\panier::class . ":delete_cart");
 });
 
 $app->run();

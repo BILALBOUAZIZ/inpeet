@@ -19,7 +19,7 @@ class panier
     }
 
 
-    public function show_card(Request $request, Response $response, array $args)
+    public function show_cart(Request $request, Response $response, array $args)
     {
 
         $query = $this->db->prepare("select * from panier ");
@@ -30,7 +30,7 @@ class panier
 
 
 
-    public function show_element_card(Request $request, Response $response, array $args)
+    public function show_element_cart(Request $request, Response $response, array $args)
     {
 
         $query = $this->db->prepare("select * from panier where id_produit= :id_produit AND id_client=:id_client");
@@ -39,7 +39,7 @@ class panier
         return $response->withJson($retour);
     }
 
-    public function add_to_card(Request $request, Response $response, array $args)
+    public function add_to_cart(Request $request, Response $response, array $args)
     {
         $body = $request->getParsedBody();
         /*faut verifier que id client n'est pas nul*/
@@ -59,7 +59,7 @@ class panier
     }
 
 
-    public function update_card(Request $request, Response $response, array $args)
+    public function update_cart(Request $request, Response $response, array $args)
     {
         $body = $request->getParsedBody();
         $query = $this->db->prepare("UPDATE panier SET qtt_panier = :qtt_panier    WHERE id_produit = :id_produit");
@@ -74,7 +74,7 @@ class panier
         return $response->withJson($data);
     }
 
-    public function delete_card(Request $request, Response $response, array $args)
+    public function delete_cart(Request $request, Response $response, array $args)
     {
 
         $query = $this->db->prepare("DELETE FROM panier WHERE id_produit = :id_produit  AND id_client=:id_client");
