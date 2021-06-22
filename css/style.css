@@ -364,7 +364,7 @@ p, a{
 #ctct{
   float: left;
   text-align: center;
-  margin: -300px 1275px;
+  margin: -280px 1275px;
   padding: 45px 20px;
   border-radius: 40px;
   box-shadow: 12px 12px 24px 0px rgb(0,0,0,0.2),-12px -12px 24px 0 rgba(255,255, 255, 1) ;
@@ -405,7 +405,7 @@ p, a{
 /*slide show*/
 /* Slideshow container */
 .slideshow-container {
-  max-width: 1519px;
+  max-width: 1260px;
   position: relative;
   margin: auto;
   margin-top: 0px;
@@ -452,14 +452,11 @@ p, a{
   color: rgb(226,226,226); /* Grey text */
   width: 100%; /* Full width */
   height: 40%;
-  padding: 20px; /* Some padding */
-  margin: auto;
   font-size:40px;
 
 }
 .text a{
   width: 100%; /* Full width */
-  padding: 20px; /* Some padding */
   margin: auto;
   font-size:40px;
   color:rgb(226,226,226) ;
