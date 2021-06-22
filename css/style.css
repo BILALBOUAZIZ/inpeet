@@ -40,7 +40,7 @@
     position:absolute;
     width: 350px;
     height: 33px;
-    margin: -600px 0px;
+    margin: -500px 0px;
     transform: translateX(-100%);
     -webkit-transform: translateX(-100%);
 }
@@ -96,7 +96,7 @@
   position: relative;
   width: 350px;
   height: 450px;
-  margin: -580px 0px ;
+  margin: -480px 0px ;
   border-radius: 40px;
   box-shadow: 12px 12px 24px 0px rgb(0,0,0,0.2),-12px -12px 24px 0 rgba(255,255, 255, 1) ;
   transform: translateX(-100%);
@@ -230,7 +230,7 @@ p, a{
 #tab {
   display:grid;
   float:left;
-  margin: 64px 500px;
+  margin: -35px 500px;
   position: relative;
   width: 300px;
   height: 220px;
@@ -364,7 +364,7 @@ p, a{
 #ctct{
   float: left;
   text-align: center;
-  margin: -280px 1275px;
+  margin: -190px 1275px;
   padding: 45px 20px;
   border-radius: 40px;
   box-shadow: 12px 12px 24px 0px rgb(0,0,0,0.2),-12px -12px 24px 0 rgba(255,255, 255, 1) ;
