@@ -507,3 +507,38 @@ p, a{
   from {opacity: .4}
   to {opacity: 1}
 }
+
+/*catego*/
+.row{
+  display:inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.catego-down{
+  margin:450px 120px;
+}
+.col1{
+  flex-basis: 30%;
+  min-width: 250px;
+  margin-bottom: 30px;
+}
+.col1 img{
+  width: 100%;
+}
+.small-container{
+  max-width: 1080px;
+  margin: auto;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+.col1 h4{
+  position: relative; /* Position the background text */
+  bottom: 00; /* At the bottom. Use top:0 to append it to the top */
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+  color: rgb(226,226,226); /* Grey text */
+  width: 100%; /* Full width */
+  font-size:40px;
+  text-align: center;
+}
