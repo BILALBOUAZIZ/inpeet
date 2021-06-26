@@ -292,12 +292,18 @@ p, a{
 }
 .tabcontent textarea {
   padding: 8px;
-  height: 80%;
+  height: 90px;
+  width: 300px;
 }
 .tabcontent label{
   display: block;
   padding-bottom:10px;
-  
+}
+.tabcontent form button {
+  font-size: 20px;
+  height: 20px;
+  width: 100px;
+  padding-bottom: 35px;
 }
 
 .tabcontent p{
@@ -521,10 +527,11 @@ p, a{
 .col1{
   flex-basis: 30%;
   min-width: 250px;
-  margin-bottom: 30px;
 }
 .col1 img{
   width: 100%;
+  border-radius: 10px;
+  box-shadow: 12px 12px 24px 0px rgb(0,0,0,0.2),-12px -12px 24px 0 rgba(255,255, 255, 1) ;
 }
 .small-container{
   max-width: 1080px;
@@ -541,4 +548,61 @@ p, a{
   width: 100%; /* Full width */
   font-size:40px;
   text-align: center;
+}
+.col2{
+  flex-basis: 48%;
+  min-width: 500px;
+  margin-top:-360px ;
+  margin-bottom: 0px;
+}
+.col2 img{
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 12px 12px 24px 0px rgb(0,0,0,0.2),-12px -12px 24px 0 rgba(255,255, 255, 1) ;
+}
+#txt2{
+  text-align: center;
+  padding: 0px 20px 20px 20px;
+  border-radius: 10px;
+  box-shadow: 12px 12px 24px 0px rgb(0,0,0,0.2),-12px -12px 24px 0 rgba(255,255, 255, 1) ;
+  align-items: grid;
+  justify-content: center;
+  background-color:#e0e0e0 ;
+  height: 370px;
+  font-weight:300;  
+}
+#txt2 p{
+  font-size: 18px;
+  color: rgba(85, 85, 85, 0.863);
+  padding-bottom: 7px;
+}
+.col2 h3{
+  position: relative; /* Position the background text */
+  bottom: 00; /* At the bottom. Use top:0 to append it to the top */
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+  color: rgb(226,226,226); /* Grey text */
+  width: 100%; /* Full width */
+  font-size:30px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 12px 12px 24px 0px rgb(0,0,0,0.2),-12px -12px 24px 0 rgba(255,255, 255, 1) ;
+}
+.col2 h4{
+  position: relative; /* Position the background text */
+  bottom: 00; /* At the bottom. Use top:0 to append it to the top */
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(143, 107, 107, 0.363); /* Black background with 0.5 opacity */
+  color: aliceblue;
+  width: 100%; /* Full width */
+  font-size:30px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 12px 12px 24px 0px rgb(0,0,0,0.2),-12px -12px 24px 0 rgba(255,255, 255, 1) ;
+}
+ #tips{
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(143, 107, 107, 0.363); /* Black background with 0.5 opacity */
+  color: aliceblue;
+  border-radius: 3px;
 }
