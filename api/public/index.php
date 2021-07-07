@@ -61,5 +61,30 @@ $app->group("/produit", function (App $app) {
     $app->delete('/{id}', \real\produit::class . ":delete_product");
 });
 
+$app->group("/race", function (App $app) {
+   
+    $app->get('/', \real\race::class . ":show_race"); // .... /command/ /* verbes http*/
+    $app->get('/{id}', \real\race::class . ":show_element_race"); // .... /command/2
+    $app->post('/', \real\race::class . ":add_to_race");
+    $app->put('/{id}', \real\race::class . ":update_race");
+    $app->delete('/{id}', \real\race::class . ":delete_race");
+});
+
+$app->group("/wishlist", function (App $app) {
+   
+    $app->get('/', \real\wishlist::class . ":get_wishlist"); // .... /command/ /* verbes http*/
+    $app->get('/{idcl}/produit/{id}', \real\wishlist::class . ":get_wish_element"); // .... /command/2
+    $app->post('/', \real\wishlist::class . ":add_wishlist");
+    $app->delete('/{idcl}/produit/{id}', \real\wishlist::class . ":delete_wish");
+});
+$app->group("/avis", function (App $app) {
+   
+    $app->get('/', \real\avis::class . ":show_avis"); // .... /command/ /* verbes http*/
+    $app->get('/{id}', \real\avis::class . ":show_element_race"); // .... /command/2
+    $app->post('/', \real\avis::class . ":add_to_race");
+    $app->put('/{id}', \real\avis::class . ":update_race");
+    $app->delete('/{id}', \real\avis::class . ":delete_race");
+});
+
 
 $app->run();
