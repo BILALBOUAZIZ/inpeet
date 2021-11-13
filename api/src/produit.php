@@ -21,9 +21,9 @@ class produit extends categorie
 
     public function get_products(Request $request, Response $response, array $args)
     {
-
-        $query = $this->db->prepare("select * from produit ");
-        $query->execute();
+        
+        $query = $this->db->prepare("SELECT * from produit where label LIKE :search ");
+        $query->execute(array("search" => "%".$request->getQueryParam("search","")."%"));
         $retour = $query->fetchAll();
         return $response->withJson($retour);
     }

@@ -1,82 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>INPET</title>
-    <link rel="stylesheet" href="./css/style.css">
-    <script src="https://kit.fontawesome.com/d19e7d8863.js" 
-    crossorigin="anonymous">
-    </script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>INPET</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="https://kit.fontawesome.com/d19e7d8863.js" crossorigin="anonymous">
+  </script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 </head>
+
 <body>
-    <header id="main-header">
-         <div class="container">
-             <div class="logo">
-                 <img src="/assets/ll1.png" alt="INPET" >
-             </div>
-             <div class="icon-bar">
-                <a id="home"  onclick="setbutton(1); " href="#"><i class="fa fa-home"></i> Home</a>
-                <a id="search" onclick="setbutton(2);" href="#"><i class="fa fa-search"></i> Rechercher</a>
-                <a id="menu" onclick="setbutton(4);" href="#"><i class="fas fa-ellipsis-h"></i> Menu</a>
-                <a id="panier" onclick="setbutton(5);" href="panier.html"><i class="fas fa-cart-arrow-down"></i> Panier</a>
-                <a id="login" onclick="setbutton(6);" href="#"><i class="fas fa-user-circle"></i> Se connecter</a>
-                <a id="contact" onclick="setbutton(3);" href="#"><i class="fa fa-envelope"></i> Contact</a>
-            </div>
-        </div>
-    </header>
-      <!-- Slideshow container -->
-<div class="slideshow-container">
+  <header id="main-header">
+    <div class="container">
+      <div class="logo">
+        <img src="/assets/ll1.png" alt="INPET">
+      </div>
+      <div class="icon-bar">
+        <a id="home" onclick="setbutton(1); " href="#"><i class="fa fa-home"></i> Home</a>
+        <a id="search" onclick="setbutton(2);" href="#"><i class="fa fa-search"></i> Rechercher</a>
+        <a id="menu" onclick="setbutton(4);" href="#"><i class="fas fa-ellipsis-h"></i> Menu</a>
+        <a id="panier" onclick="setbutton(5);" href="#"><i class="fas fa-cart-arrow-down"></i> Panier</a>
+        <a id="login" onclick="setbutton(6);" href="#"><i class="fas fa-user-circle"></i> Se connecter</a>
+        <a id="contact" onclick="setbutton(3);" href="#"><i class="fa fa-envelope"></i> Contact</a>
+      </div>
+    </div>
+  </header>
+  <!-- Slideshow container -->
+  <div class="slideshow-container">
 
     <!-- Full-width images with number and caption text -->
     <div class="mySlides fade">
       <div class="numbertext">1 / 4</div>
       <img src="assets/pet22.jpg" style="width:100%">
       <div class="text">
-          <h1>INPET</h1>
-          <p>VOTRE ANIMALERIE EN LIGNE</p>
+        <h1>INPET</h1>
+        <p>VOTRE ANIMALERIE EN LIGNE</p>
       </div>
     </div>
-  
+
     <div class="mySlides fade">
       <div class="numbertext">2 / 4</div>
       <img src="assets/klb.jpg" style="width:100%">
       <div class="text">
-          <a href="#">
-              <p>ELXPLORER NOTRE UNIVERS </p>
-              <h1>CHIENS</h1>
-          </a>
+        <a href="#">
+          <p>ELXPLORER NOTRE UNIVERS </p>
+          <h1>CHIENS</h1>
+        </a>
       </div>
     </div>
     <div class="mySlides fade">
-        <div class="numbertext">3 / 4</div>
-        <img src="assets/cat22.jpg" style="width:100%">
-        <div class="text">
-            <a href="#">
-                <p>BOUTIQUE </p>
-                <h1>CHATS</h1>
-            </a>
-        </div>
+      <div class="numbertext">3 / 4</div>
+      <img src="assets/cat22.jpg" style="width:100%">
+      <div class="text">
+        <a href="#">
+          <p>BOUTIQUE </p>
+          <h1>CHATS</h1>
+        </a>
       </div>
-  
+    </div>
+
     <div class="mySlides fade">
       <div class="numbertext">4 / 4</div>
       <img src="assets/bird111.jpg" style="width:100%">
       <div class="text">
         <a href="#">
-            <p>ESPACE </p>
-            <h1>OISEAUX</h1>
+          <p>ESPACE </p>
+          <h1>OISEAUX</h1>
         </a>
       </div>
     </div>
-  
+
     <!-- Next and previous buttons -->
     <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
     <a class="next" onclick="plusSlides(1)">&#10095;</a>
   </div>
   <br>
-  
+
   <!-- The dots/circles -->
   <div style="text-align:center">
     <span class="dot" onclick="currentSlide(1)"></span>
@@ -84,97 +87,94 @@
     <span class="dot" onclick="currentSlide(3)"></span>
     <span class="dot" onclick="currentSlide(4)"></span>
     <!--nav content-->
-  </div> 
-        <form id="slider" class="slide-out"  action="/action_page.php">
-          <input type="text" placeholder="Search.." name="search">
-          <button type="submit"><i class="fa fa-search"></i></button>
-        </form>
-        <div id="sr" class="so">
-            <div class="signin-sign-up">
-                <form  action="" class="sign-in-form">
-                    <h2 class="title">S'identifier</h2>
-                    <div class="input-field">
-                        <i class="fas fa-user"></i>
-                        <input type="text" placeholder="Username">
-                    </div>
-                    <div class="input-field">
-                        <i class="fas fa-lock"></i>
-                        <input type="password" placeholder="password">
-                    </div>
-                    <a href="#" class="forgot-password">Mot de passe oublié</a>
-                    <input type="submit" value="login" class="btn">
-                    <p>Vous n'avez pas un compte ? <a href="#" class="account-text" id="sign-up-link">S'inscrire</a> </p>
-
-                </form>
-                <form  action="" class="sign-up-form">
-                    <h2 class="title">S'inscrire</h2>
-                    <div class="input-field">
-                        <i class="fas fa-user"></i>
-                        <input type="text" placeholder="Username">
-                    </div>
-                    <div class="input-field">
-                        <i class="fas fa-envelope"></i>
-                        <input type="email" placeholder="Email">
-                    </div>
-                    <div class="input-field">
-                        <i class="fas fa-lock"></i>
-                        <input type="password" placeholder="password">
-                    </div>  
-                    <input type="submit" value="Sign up" class="btn">
-                    <p>Vous avez déja un compte ? <a href="#" class="account-text" id="sign-in-link">S'identifier</a> </p>
-                </form>
-            </div>  
+  </div>
+  <form id="slider" class="slide-out">
+    <input type="text" id="input_search" placeholder="Search.." name="search">
+    <button type="button" id="searchButton" onclick="searchS()"><i class="fa fa-search"></i></button>
+  </form>
+  <div id="sr" class="so">
+    <div class="signin-sign-up">
+      <form action="" class="sign-in-form">
+        <h2 class="title">S'identifier</h2>
+        <div class="input-field">
+          <i class="fas fa-user"></i>
+          <input type="text" placeholder="Username">
         </div>
-
-        <div id="tab" class="sirlhih">
-            <button class="tablinks" onclick="openIt(event, 'categories')">Catégories</button>
-            <button class="tablinks" onclick="openIt(event, 'feedback')">Donnez-nous vos impressions</button>
-            <button class="tablinks" onclick="openIt(event, 'aboutus')">A propos de nous</button>
-          </div>
-          <div  class="contenttab">
-          <div id="categories" class="tabcontent">
-            <button class="catego" ><i class="fas fa-cat"></i> Chats</button>
-            <button class="catego" ><i class="fas fa-dog"></i> Chiens</button>
-            <button class="catego" ><i class="fas fa-dove"></i> Oiseaux</button>
-          </div>
-          
-          <div id="feedback" class="tabcontent">
-            <form class="form-feedback" action="">
-              <label>Feedback</label>
-              <textarea name="feedback" cols="20" rows="10"></textarea>
-              <button type="submit">Envoyer</button>
-            </form>
-          </div>
-          
-          <div id="aboutus" class="tabcontent">
-            <h3>A propos de nous</h3>
-            <p>chi about us hna </p>
-          </div> 
-          </div>
-        <div id="ctct" class="hide">
-            <p>
-                <h4>060000000</h4>
-                <br>
-                <h4>inpet@gmail.com</h4>
-            </p>
+        <div class="input-field">
+          <i class="fas fa-lock"></i>
+          <input type="password" placeholder="password">
         </div>
+        <a href="#" class="forgot-password">Mot de passe oublié</a>
+        <input type="submit" value="login" class="btn">
+        <p>Vous n'avez pas un compte ? <a href="#" class="account-text" id="sign-up-link">S'inscrire</a> </p>
+
+      </form>
+      <form action="" class="sign-up-form">
+        <h2 class="title">S'inscrire</h2>
+        <div class="input-field">
+          <i class="fas fa-user"></i>
+          <input type="text" placeholder="Username">
+        </div>
+        <div class="input-field">
+          <i class="fas fa-envelope"></i>
+          <input type="email" placeholder="Email">
+        </div>
+        <div class="input-field">
+          <i class="fas fa-lock"></i>
+          <input type="password" placeholder="password">
+        </div>
+        <input type="submit" value="Sign up" class="btn">
+        <p>Vous avez déja un compte ? <a href="#" class="account-text" id="sign-in-link">S'identifier</a> </p>
+      </form>
+    </div>
+  </div>
+
+  <div id="tab" class="sirlhih">
+    <button class="tablinks" onclick="openIt(event, 'categories')">Catégories</button>
+    <button class="tablinks" onclick="openIt(event, 'feedback')">Donnez-nous vos impressions</button>
+    <button class="tablinks" onclick="openIt(event, 'aboutus')">A propos de nous</button>
+  </div>
+  <div class="contenttab">
+    <div id="categories" class="tabcontent">
+      <button class="catego"><i class="fas fa-cat"></i> Chats</button>
+      <button class="catego"><i class="fas fa-dog"></i> Chiens</button>
+      <button class="catego"><i class="fas fa-dove"></i> Oiseaux</button>
+    </div>
+
+    <div id="feedback" class="tabcontent">
+      <label>Feedback</label>
+      <textarea name="feedback" cols="30" rows="10"></textarea>
+    </div>
+
+    <div id="aboutus" class="tabcontent">
+      <h3>A propos de nous</h3>
+      <p>chi about us hna </p>
+    </div>
+  </div>
+  <div id="ctct" class="hide">
+    <p>
+    <h4>060000000</h4>
+    <br>
+    <h4>inpet@gmail.com</h4>
+    </p>
+  </div>
   <!--categories-->
   <div class="catego-down">
     <div class="small-container">
       <div class="row">
         <div class="col1">
-         <a href="#"><img src="/assets/dogcatego.jpg" >
-        <h4>Chiens</h4>
-        </a>
+          <a href="#"><img src="/assets/dogcatego.jpg">
+            <h4>Chiens</h4>
+          </a>
         </div>
         <div class="col1">
-         <a href="#"><img src="/assets/catcatego.jpg" >
-        <h4>Chats</h4>
-        </a>
-       </div>
+          <a href="#"><img src="/assets/catcatego.jpg">
+            <h4>Chats</h4>
+          </a>
+        </div>
         <div class="col1">
-          <a href="#"><img src="/assets/birdcatego.jpg" >
-          <h4>Oiseaux</h4>
+          <a href="#"><img src="/assets/birdcatego.jpg">
+            <h4>Oiseaux</h4>
           </a>
         </div>
       </div>
@@ -217,5 +217,14 @@
   </div>
     <div style="margin-top: 70%;"></div>
     <script src="/js/main.js"></script>
+  <div style="margin-top: 70%;"></div>
+  <script src="/js/main.js" defer></script>
+  <script>
+    function searchS() {
+      const val = $("#input_search").val();
+      window.location = "produits?search=" + val   
+    }
+  </script>
 </body>
+
 </html>

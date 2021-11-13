@@ -41,10 +41,10 @@ $app->group("/command", function (App $app) {
 
 $app->group("/panier", function (App $app) {
     $app->get('/', \real\panier::class . ":show_cart"); // .... /command/ /* verbes http*/
-    $app->get('/{id},{idcl}', \real\panier::class . ":show_element_cart"); // .... /command/2
-    $app->post('/', \real\panier::class . ":add_to_cart");
+    $app->get('/{idcl}/produit/{id}', \real\panier::class . ":show_element_cart"); // .... /command/2
+    $app->post('/{idcl}', \real\panier::class . ":add_to_cart");
     $app->put('/{id}', \real\panier::class . ":update_cart");
-    $app->delete('/{id},{idcl}', \real\panier::class . ":delete_cart");
+    $app->delete('/{idcl}/produit/{id}', \real\panier::class . ":delete_cart");
 });
 
 $app->group("/categorie", function (App $app) {
@@ -53,12 +53,37 @@ $app->group("/categorie", function (App $app) {
 
 
 $app->group("/produit", function (App $app) {
-    $app->get('/', \real\produit::class . ":get_products"); 
+    $app->get('', \real\produit::class . ":get_products"); 
     $app->get('/{idc}', \real\produit::class . ":par_catego"); 
-    $app->get('/{idr}', \real\produit::class . ":par_race"); 
-    $app->post('/', \real\produit::class . ":create_product");
+    $app->get('/race/s{idr}', \real\produit::class . ":par_race"); 
+    $app->post('', \real\produit::class . ":create_product");
     $app->put('/{id}', \real\produit::class . ":update_product");
     $app->delete('/{id}', \real\produit::class . ":delete_product");
+});
+
+$app->group("/race", function (App $app) {
+   
+    $app->get('/', \real\race::class . ":show_race"); // .... /command/ /* verbes http*/
+    $app->get('/{id}', \real\race::class . ":show_element_race"); // .... /command/2
+    $app->post('/', \real\race::class . ":add_to_race");
+    $app->put('/{id}', \real\race::class . ":update_race");
+    $app->delete('/{id}', \real\race::class . ":delete_race");
+});
+
+$app->group("/wishlist", function (App $app) {
+   
+    $app->get('/', \real\wishlist::class . ":get_wishlist"); // .... /command/ /* verbes http*/
+    $app->get('/{idcl}/produit/{id}', \real\wishlist::class . ":get_wish_element"); // .... /command/2
+    $app->post('/', \real\wishlist::class . ":add_wishlist");
+    $app->delete('/{idcl}/produit/{id}', \real\wishlist::class . ":delete_wish");
+});
+$app->group("/avis", function (App $app) {
+   
+    $app->get('/', \real\avis::class . ":show_avis"); // .... /command/ /* verbes http*/
+    $app->get('/{id}', \real\avis::class . ":show_element_race"); // .... /command/2
+    $app->post('/', \real\avis::class . ":add_to_race");
+    $app->put('/{id}', \real\avis::class . ":update_race");
+    $app->delete('/{id}', \real\avis::class . ":delete_race");
 });
 
 

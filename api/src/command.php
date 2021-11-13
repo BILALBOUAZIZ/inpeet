@@ -25,7 +25,7 @@ class command
         $query = $this->db->prepare("select * from commande ");
         $query->execute();
         $retour = $query->fetchAll();
-        return $response->withJson($retour);
+        return $response->withJson($retour)->withStatus(200);
     }
 
 
@@ -36,7 +36,7 @@ class command
         $query = $this->db->prepare("select * from commande where id_commande= :id_commande");
         $query->execute(array(':id_commande' => $args['id']));
         $retour = $query->fetch();
-        return $response->withJson($retour);
+        return $response->withJson($retour)->withStatus(200);
     }
 
     public function create_command(Request $request, Response $response, array $args)
@@ -53,8 +53,8 @@ class command
         } else {
             $data = ['message' => 'Erreur ', 'status' => 400];
         }
-
-        return $response->withJson($data);
+        return $response->withJson($data)->withStatus($data["status"]);
+        
     }
 
 
@@ -70,7 +70,7 @@ class command
         } else {
             $data = ['message' => 'Erreur ', 'status' => 400];
         }
-        return $response->withJson($data);
+        return $response->withJson($data)->withStatus($data["status"]);
     }
 
     public function delete_command(Request $request, Response $response, array $args)
@@ -86,6 +86,6 @@ class command
             $data = ['message' => 'La commande est introuvable ', 'status' => 400];
         }
 
-        return $response->withJson($data);
+        return $response->withJson($data)->withStatus($data["status"]);;
     }
 }

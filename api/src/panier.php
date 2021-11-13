@@ -45,7 +45,7 @@ class panier
         /*faut verifier que id client n'est pas nul*/
         
         $query = $this->db->prepare("INSERT INTO panier(id_client,id_produit) VALUES(:id_client,:id_produit )");
-        $query->execute(array(':id_client' => $body['client'], ':id_produit' => $body['produit'], ));
+        $query->execute(array(':id_client' => $args['idcl'], ':id_produit' => $body['produit'], ));
 
 
         if ($query) {

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INPET</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://kit.fontawesome.com/d19e7d8863.js" crossorigin="anonymous">
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
+        integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body>
+    <header id="main-header">
+        <div class="container">
+            <div class="logo">
+                <img src="/assets/ll1.png" alt="INPET">
+            </div>
+            <div class="icon-bar">
+                <a id="home" onclick="setbutton(1); " href="#"><i class="fa fa-home"></i> Home</a>
+                <a id="search" onclick="setbutton(2);" href="#"><i class="fa fa-search"></i> Rechercher</a>
+                <a id="menu" onclick="setbutton(4);" href="#"><i class="fas fa-ellipsis-h"></i> Menu</a>
+                <a id="panier" onclick="setbutton(5);" href="#"><i class="fas fa-cart-arrow-down"></i> Panier</a>
+                <a id="login" onclick="setbutton(6);" href="#"><i class="fas fa-user-circle"></i> Se connecter</a>
+                <a id="contact" onclick="setbutton(3);" href="#"><i class="fa fa-envelope"></i> Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <body>
+
+        <div>
+            <h2>vous avez rehcerché : <span id="searchText"></span></h2>
+        </div>
+        <ul id="listProducts">
+
+        </ul>
+
+        <script>
+            const queryString = window.location.search;
+            const urlParams = new URLSearchParams(queryString);
+            $("#searchText").text(urlParams.get("search"));
+            $(function () {
+                /* function(resp){
+                     return resp.json()
+                 }     
+                 */
+
+                axios.post("/api/public/produit", {
+                    id_race: 1,
+                    id_categorie: 1,
+                    label: "produit 3",
+                    prix_produit: 150
+                }).then(msg => {
+                    console.log(msg);
+                }).catch(err => {
+                    console.error(err);
+                })
+                axios.get("/api/public/produit?search=" + urlParams.get("search")).then(resp => {
+                    // console.log(resp);
+                    resp.data.forEach(el => {
+                        $("#listProducts").append(`<li>${el.id_produit} -  ${el.label}  ${el.prix_produit} </li>`)
+                        //$("#listProducts").append("<li>" +  el.id_produit + " - " + )
+
+                    })
+                }).catch(err => {
+                    console.error(err);
+                });
+            });
+        </script>
+    </body>
+
+</html>
