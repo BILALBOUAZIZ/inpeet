@@ -23,7 +23,7 @@
                 <img src="/assets/ll1.png" alt="INPET">
             </div>
             <div class="icon-bar">
-                <a id="home" onclick="setbutton(1); " href="#"><i class="fa fa-home"></i> Home</a>
+                <a id="home" onclick="setbutton(1); " href="index.html"><i class="fa fa-home"></i> Home</a>
                 <a id="search" onclick="setbutton(2);" href="#"><i class="fa fa-search"></i> Rechercher</a>
                 <a id="menu" onclick="setbutton(4);" href="#"><i class="fas fa-ellipsis-h"></i> Menu</a>
                 <a id="panier" onclick="setbutton(5);" href="#"><i class="fas fa-cart-arrow-down"></i> Panier</a>
@@ -33,47 +33,28 @@
         </div>
     </header>
 
-    <body>
 
-        <div>
-            <h2>vous avez rehcerché : <span id="searchText"></span></h2>
+    <div class="catego-down">
+        <div class="small-container">
+          <div class="row">
+            <div class="col1", class="johnny">
+              <a href="#"><img src="/assets/bird.jpg">
+                <h4>JOHNNY</h4>
+                <h3>age : 5 months
+                    <br>
+
+                    gender : male
+                    <br>
+                    We are selling Johnny, our 5 month old male bird.
+                    He has a friendly personality.
+                    He is good with children and doesn't bite.
+                    However, he will often chirp loudly during the night. </h3>
+              </a>
+            </div>
         </div>
-        <ul id="listProducts">
+    </div>
+  </div>
+      <body>
 
-        </ul>
-
-        <script>
-            const queryString = window.location.search;
-            const urlParams = new URLSearchParams(queryString);
-            $("#searchText").text(urlParams.get("search"));
-            $(function () {
-                /* function(resp){
-                     return resp.json()
-                 }     
-                 */
-
-                axios.post("/api/public/produit", {
-                    id_race: 1,
-                    id_categorie: 1,
-                    label: "produit 3",
-                    prix_produit: 150
-                }).then(msg => {
-                    console.log(msg);
-                }).catch(err => {
-                    console.error(err);
-                })
-                axios.get("/api/public/produit?search=" + urlParams.get("search")).then(resp => {
-                    // console.log(resp);
-                    resp.data.forEach(el => {
-                        $("#listProducts").append(`<li>${el.id_produit} -  ${el.label}  ${el.prix_produit} </li>`)
-                        //$("#listProducts").append("<li>" +  el.id_produit + " - " + )
-
-                    })
-                }).catch(err => {
-                    console.error(err);
-                });
-            });
-        </script>
-    </body>
-
+       
 </html>
